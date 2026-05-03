@@ -25,7 +25,7 @@ void USART_init(void)
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
 
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9 | GPIO_Pin_10;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
   GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
 	GPIO_PinAFConfig(GPIOA, GPIO_PinSource9, GPIO_AF_USART1);
@@ -51,11 +51,17 @@ int main(void)
 {
 	board_uart_init();
 	USART_init();
-//	
-//	usart_write("nihao");
+
 	printf("hello world\r\n");
 	while(1)
 	{
+		
+		if(USART_GetFlagStatus(USART1, USART_FLAG_RXNE) != RESET){
+			USART_ClearFlag(USART1, USART_FLAG_RXNE);
+			uint16_t c = USART_ReceiveData(USART1);
+			printf("recieve:%c ,ascii:%d\r\n", c, c);
+			
+		}
 		
 	}
 	
@@ -66,7 +72,7 @@ int fputc(int ch, FILE *stream)
 	(void)stream;
 	USART_ClearFlag(USART1, USART_FLAG_TC);
 	USART_SendData(USART1, (uint16_t)ch);
-	while(USART_GetFlagStatus(USART1,  USART_FLAG_TC) == RESET); 
+	while(USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET); 
 	
 	return ch;
 }
