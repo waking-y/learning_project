@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER,HSE_VALUE=8000000</Define>
               <Undefine></Undefine>
-              <IncludePath>..\firmware\cmsis\core;..\driver\inc;..\firmware\cmsis\device</IncludePath>
+              <IncludePath>..\firmware\cmsis\core;..\firmware\cmsis\device;..\firmware\driver\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -408,6 +408,21 @@
               <FileType>1</FileType>
               <FilePath>..\firmware\cmsis\device\system_stm32f4xx.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f4xx_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\STM32F407\firmware\driver\src\stm32f4xx_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\STM32F407\firmware\driver\src\stm32f4xx_rcc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\STM32F407\firmware\driver\src\stm32f4xx_usart.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -417,214 +432,194 @@
           <GroupName>firmware/driver</GroupName>
           <Files>
             <File>
-              <FileName>misc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\misc.c</FilePath>
+              <FileName>misc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\misc.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_adc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_adc.c</FilePath>
+              <FileName>stm32f4xx_adc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_adc.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_can.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_can.c</FilePath>
+              <FileName>stm32f4xx_can.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_can.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_cec.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_cec.c</FilePath>
+              <FileName>stm32f4xx_cec.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_cec.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_crc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_crc.c</FilePath>
+              <FileName>stm32f4xx_crc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_crc.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_cryp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_cryp.c</FilePath>
+              <FileName>stm32f4xx_cryp.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_cryp.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_cryp_aes.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_cryp_aes.c</FilePath>
+              <FileName>stm32f4xx_dac.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_dac.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_cryp_des.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_cryp_des.c</FilePath>
+              <FileName>stm32f4xx_dbgmcu.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_dbgmcu.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_cryp_tdes.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_cryp_tdes.c</FilePath>
+              <FileName>stm32f4xx_dcmi.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_dcmi.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_dac.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_dac.c</FilePath>
+              <FileName>stm32f4xx_dfsdm.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_dfsdm.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_dbgmcu.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_dbgmcu.c</FilePath>
+              <FileName>stm32f4xx_dma.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_dma.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_dcmi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_dcmi.c</FilePath>
+              <FileName>stm32f4xx_dma2d.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_dma2d.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_dfsdm.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_dfsdm.c</FilePath>
+              <FileName>stm32f4xx_dsi.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_dsi.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_dma.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_dma.c</FilePath>
+              <FileName>stm32f4xx_exti.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_exti.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_dma2d.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_dma2d.c</FilePath>
+              <FileName>stm32f4xx_flash.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_flash.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_dsi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_dsi.c</FilePath>
+              <FileName>stm32f4xx_flash_ramfunc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_flash_ramfunc.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_exti.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_exti.c</FilePath>
+              <FileName>stm32f4xx_fmc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_fmc.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_flash.c</FilePath>
+              <FileName>stm32f4xx_fmpi2c.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_fmpi2c.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_flash_ramfunc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_flash_ramfunc.c</FilePath>
+              <FileName>stm32f4xx_fsmc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_fsmc.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_fmpi2c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_fmpi2c.c</FilePath>
+              <FileName>stm32f4xx_gpio.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_gpio.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_fsmc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_fsmc.c</FilePath>
+              <FileName>stm32f4xx_hash.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_hash.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_gpio.c</FilePath>
+              <FileName>stm32f4xx_i2c.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_i2c.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_hash.c</FilePath>
+              <FileName>stm32f4xx_iwdg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_iwdg.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hash_md5.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_hash_md5.c</FilePath>
+              <FileName>stm32f4xx_lptim.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_lptim.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_hash_sha1.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_hash_sha1.c</FilePath>
+              <FileName>stm32f4xx_ltdc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_ltdc.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_i2c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_i2c.c</FilePath>
+              <FileName>stm32f4xx_pwr.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_pwr.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_iwdg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_iwdg.c</FilePath>
+              <FileName>stm32f4xx_qspi.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_qspi.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_lptim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_lptim.c</FilePath>
+              <FileName>stm32f4xx_rcc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_rcc.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_ltdc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_ltdc.c</FilePath>
+              <FileName>stm32f4xx_rng.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_rng.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_pwr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_pwr.c</FilePath>
+              <FileName>stm32f4xx_rtc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_rtc.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_qspi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_qspi.c</FilePath>
+              <FileName>stm32f4xx_sai.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_sai.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_rcc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_rcc.c</FilePath>
+              <FileName>stm32f4xx_sdio.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_sdio.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_rng.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_rng.c</FilePath>
+              <FileName>stm32f4xx_spdifrx.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_spdifrx.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_rtc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_rtc.c</FilePath>
+              <FileName>stm32f4xx_spi.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_spi.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_sai.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_sai.c</FilePath>
+              <FileName>stm32f4xx_syscfg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_syscfg.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_sdio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_sdio.c</FilePath>
+              <FileName>stm32f4xx_tim.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_tim.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_spdifrx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_spdifrx.c</FilePath>
+              <FileName>stm32f4xx_usart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_usart.h</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_spi.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_syscfg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_syscfg.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_tim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_tim.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_usart.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_wwdg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\driver\src\stm32f4xx_wwdg.c</FilePath>
+              <FileName>stm32f4xx_wwdg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\firmware\driver\inc\stm32f4xx_wwdg.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -1,0 +1,11 @@
+.\objects\main.o: ..\app\main.c
+.\objects\main.o: D:\EmbeddedSoftware\Keil5.43\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdbool.h
+.\objects\main.o: D:\EmbeddedSoftware\Keil5.43\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdint.h
+.\objects\main.o: ..\app\board.h
+.\objects\main.o: ..\driver\led\led.h
+.\objects\main.o: ..\driver\botton\botton.h
+.\objects\main.o: D:\EmbeddedSoftware\Keil5.43\ARM\ARM_Compiler_5.06u7\Bin\..\include\stddef.h
+.\objects\main.o: ..\driver\24c02\24c02.h
+.\objects\main.o: ..\driver\USART1\usart1.h
+.\objects\main.o: D:\EmbeddedSoftware\Keil5.43\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdio.h
+.\objects\main.o: D:\EmbeddedSoftware\Keil5.43\ARM\ARM_Compiler_5.06u7\Bin\..\include\string.h
