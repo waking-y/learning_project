@@ -1,9 +1,9 @@
 Dependencies for Project 'stm32f407', Target 'Target_1': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARM_Compiler_5.06u7
-F (..\app\main.c)(0x69FDDBF9)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\led -I ..\driver\botton -I ..\app -I ..\driver\IIC-soft -I ..\driver\24c02 -I ..\driver\USART1-D__UVISION_VERSION="543" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DHSE_VALUE="8000000"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (..\app\main.c)(0x69FF31D9)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\led -I ..\driver\botton -I ..\app -I ..\driver\IIC-soft -I ..\driver\24c02 -I ..\driver\USART1-D__UVISION_VERSION="543" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DHSE_VALUE="8000000"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (D:\EmbeddedSoftware\Keil5.43\ARM\ARM_Compiler_5.06u7\include\stdbool.h)(0x5E8E3CC2)
 I (D:\EmbeddedSoftware\Keil5.43\ARM\ARM_Compiler_5.06u7\include\stdint.h)(0x5E8E3CC2)
-I (..\app\board.h)(0x69FDC8BE)
+I (..\app\board.h)(0x69FF30EE)
 I (..\driver\led\led.h)(0x69F71376)
 I (..\driver\botton\botton.h)(0x69F727D5)
 I (D:\EmbeddedSoftware\Keil5.43\ARM\ARM_Compiler_5.06u7\include\stddef.h)(0x5E8E3CC2)
@@ -11,8 +11,8 @@ I (..\driver\24c02\24c02.h)(0x69FDCADE)
 I (..\driver\USART1\usart1.h)(0x69FDCADE)
 I (D:\EmbeddedSoftware\Keil5.43\ARM\ARM_Compiler_5.06u7\include\stdio.h)(0x5E8E3CC2)
 I (D:\EmbeddedSoftware\Keil5.43\ARM\ARM_Compiler_5.06u7\include\string.h)(0x5E8E3CC2)
-F (..\app\board.c)(0x69FDD28E)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\led -I ..\driver\botton -I ..\app -I ..\driver\IIC-soft -I ..\driver\24c02 -I ..\driver\USART1-D__UVISION_VERSION="543" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DHSE_VALUE="8000000"-o .\objects\board.o --omf_browse .\objects\board.crf --depend .\objects\board.d)
-I (..\app\board.h)(0x69FDC8BE)
+F (..\app\board.c)(0x69FF344B)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\led -I ..\driver\botton -I ..\app -I ..\driver\IIC-soft -I ..\driver\24c02 -I ..\driver\USART1-D__UVISION_VERSION="543" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DHSE_VALUE="8000000"-o .\objects\board.o --omf_browse .\objects\board.crf --depend .\objects\board.d)
+I (..\app\board.h)(0x69FF30EE)
 I (..\driver\led\led.h)(0x69F71376)
 I (D:\EmbeddedSoftware\Keil5.43\ARM\ARM_Compiler_5.06u7\include\stdbool.h)(0x5E8E3CC2)
 I (D:\EmbeddedSoftware\Keil5.43\ARM\ARM_Compiler_5.06u7\include\stdint.h)(0x5E8E3CC2)
@@ -139,7 +139,7 @@ I (..\firmware\driver\inc\stm32f4xx_fsmc.h)(0x69E99636)
 I (..\driver\botton\botton.h)(0x69F727D5)
 F (..\driver\botton\botton.h)(0x69F727D5)()
 F (..\driver\IIC-soft\I2C.h)(0x69FDCADE)()
-F (..\driver\IIC-soft\I2C.c)(0x69FDDA80)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\led -I ..\driver\botton -I ..\app -I ..\driver\IIC-soft -I ..\driver\24c02 -I ..\driver\USART1-D__UVISION_VERSION="543" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DHSE_VALUE="8000000"-o .\objects\i2c.o --omf_browse .\objects\i2c.crf --depend .\objects\i2c.d)
+F (..\driver\IIC-soft\I2C.c)(0x69FF3223)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\led -I ..\driver\botton -I ..\app -I ..\driver\IIC-soft -I ..\driver\24c02 -I ..\driver\USART1-D__UVISION_VERSION="543" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DHSE_VALUE="8000000"-o .\objects\i2c.o --omf_browse .\objects\i2c.crf --depend .\objects\i2c.d)
 I (..\driver\IIC-soft\I2C_desc.h)(0x69FDCADE)
 I (D:\EmbeddedSoftware\Keil5.43\ARM\ARM_Compiler_5.06u7\include\stdint.h)(0x5E8E3CC2)
 I (..\firmware\cmsis\device\stm32f4xx.h)(0x69E9DA6C)
@@ -176,14 +176,14 @@ I (..\firmware\driver\inc\stm32f4xx_dac.h)(0x69E99636)
 I (..\firmware\driver\inc\stm32f4xx_dcmi.h)(0x69E99636)
 I (..\firmware\driver\inc\stm32f4xx_fsmc.h)(0x69E99636)
 I (..\driver\IIC-soft\I2C.h)(0x69FDCADE)
-F (..\driver\24c02\24c02.c)(0x69FDB887)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\led -I ..\driver\botton -I ..\app -I ..\driver\IIC-soft -I ..\driver\24c02 -I ..\driver\USART1-D__UVISION_VERSION="543" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DHSE_VALUE="8000000"-o .\objects\24c02.o --omf_browse .\objects\24c02.crf --depend .\objects\24c02.d)
+F (..\driver\24c02\24c02.c)(0x69FF344B)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\led -I ..\driver\botton -I ..\app -I ..\driver\IIC-soft -I ..\driver\24c02 -I ..\driver\USART1-D__UVISION_VERSION="543" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DHSE_VALUE="8000000"-o .\objects\24c02.o --omf_browse .\objects\24c02.crf --depend .\objects\24c02.d)
 I (..\driver\24c02\24c02_desc.h)(0x69FDCADE)
 I (D:\EmbeddedSoftware\Keil5.43\ARM\ARM_Compiler_5.06u7\include\stdint.h)(0x5E8E3CC2)
 I (..\driver\IIC-soft\I2C.h)(0x69FDCADE)
 I (..\driver\24c02\24c02.h)(0x69FDCADE)
 F (..\driver\24c02\24c02.h)(0x69FDCADE)()
 F (..\driver\USART1\usart1.h)(0x69FDCADE)()
-F (..\driver\USART1\usart1.c)(0x69FDCB09)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\led -I ..\driver\botton -I ..\app -I ..\driver\IIC-soft -I ..\driver\24c02 -I ..\driver\USART1-D__UVISION_VERSION="543" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DHSE_VALUE="8000000"-o .\objects\usart1.o --omf_browse .\objects\usart1.crf --depend .\objects\usart1.d)
+F (..\driver\USART1\usart1.c)(0x69FF344B)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\firmware\cmsis\core -I ..\firmware\cmsis\device -I ..\firmware\driver\inc -I ..\driver\led -I ..\driver\botton -I ..\app -I ..\driver\IIC-soft -I ..\driver\24c02 -I ..\driver\USART1-D__UVISION_VERSION="543" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DHSE_VALUE="8000000"-o .\objects\usart1.o --omf_browse .\objects\usart1.crf --depend .\objects\usart1.d)
 I (..\driver\USART1\usart1_desc.h)(0x69FDCADE)
 I (D:\EmbeddedSoftware\Keil5.43\ARM\ARM_Compiler_5.06u7\include\stdint.h)(0x5E8E3CC2)
 I (..\firmware\cmsis\device\stm32f4xx.h)(0x69E9DA6C)

@@ -27,7 +27,7 @@ int main(void)
     char read_char = 0;
 
     board_lowlevel_init();
-    usart1_init(debug_usart1);
+    usart1_init(usart1);
     led_init(led9);
     led_init(led10);
     botton_init(key0);
@@ -40,20 +40,16 @@ int main(void)
         at24c02_write_byte(at24c02, eeprom_addr + i, write_str[i]);
     }
     
-    at24c02_read_buffer(at24c02, eeprom_addr, (uint8_t *)read_str, strlen(write_str)); // 读取所有写入的数据，包括特殊字符
-    at24c02_write_byte(at24c02, eeprom_addr, test_char); // 在字符串末尾写入一个特殊字符，验证边界条件
-    read_char = at24c02_read_byte(at24c02, eeprom_addr); // 读取所有写入的数据，包括特殊字符
-
+    at24c02_read_buffer(at24c02, eeprom_addr, (uint8_t *)read_str, strlen(write_str)); 
+    at24c02_write_byte(at24c02, eeprom_addr, test_char); 
+    read_char = at24c02_read_byte(at24c02, eeprom_addr);
     printf("EEPROM Test\r\n");
     printf("Write String: %c\r\n", test_char);
     printf("Write Buffer: %s\r\n", write_str);
     printf("Read String : %c\r\n", read_char);
     printf("Read Buffer : %s\r\n", read_str);
 
-
-    // 步骤 C: 验证数据是否完全一致
     if (strcmp(&test_char, &read_char) == 0) {
-        // 如果字符串一字不差地被成功存入并读出，点亮 LED9
         printf("Result: EEPROM Test Success!\r\n");
         led_on(led9);
     } else {

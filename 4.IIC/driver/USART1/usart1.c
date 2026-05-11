@@ -1,12 +1,16 @@
 #include "usart1_desc.h"
 #include "usart1.h"
 
+/*
+ * Function: usart1_init
+ * Description: Initialize USART1 peripheral
+ */
 void usart1_init(usart1_handle_t usart1)
 {
     GPIO_InitTypeDef GPIO_InitStructure;
     USART_InitTypeDef USART_InitStructure;
 
-    // 1. 配置引脚复用映射 (STM32F4 必须配置)
+    // 1. 配置引脚复用映射 
     GPIO_PinAFConfig(usart1->TX_Port, usart1->TX_PinSource, usart1->GPIO_AF);
     GPIO_PinAFConfig(usart1->RX_Port, usart1->RX_PinSource, usart1->GPIO_AF);
 
@@ -18,7 +22,7 @@ void usart1_init(usart1_handle_t usart1)
     GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
     GPIO_Init(usart1->TX_Port, &GPIO_InitStructure);
 
-    // 3. 初始化 RX 引脚为复用模式 (F4中RX和TX一样配置为AF即可)
+    // 3. 初始化 RX 引脚为复用模式 
     GPIO_InitStructure.GPIO_Pin = usart1->RX_Pin;
     GPIO_Init(usart1->RX_Port, &GPIO_InitStructure);
 
@@ -35,7 +39,10 @@ void usart1_init(usart1_handle_t usart1)
     USART_Cmd(usart1->USARTx, ENABLE);
 }
 
-// 阻塞式发送单字节数据
+/*
+ * Function: usart1_send_byte
+ * Description: Send a byte of data over USART1
+ */
 void usart1_send_byte(usart1_handle_t usart1, uint8_t data)
 {
     USART_SendData(usart1->USARTx, data);

@@ -8,6 +8,10 @@ static void i2c_delay(void)
         ;
 }
 
+/*
+ * Function: i2c_init
+ * Description: Initialize the I2C interface
+ */
 void i2c_init(i2c_handle_t i2c)
 {
     GPIO_InitTypeDef GPIO_InitStruct;
@@ -27,6 +31,10 @@ void i2c_init(i2c_handle_t i2c)
     GPIO_SetBits(i2c->SDA_Port, i2c->SDA_Pin);
 }
 
+/*
+ * Function: i2c_start
+ * Description: Generate I2C start condition
+ */
 void i2c_start(i2c_handle_t i2c)
 {
     GPIO_SetBits(i2c->SDA_Port, i2c->SDA_Pin);
@@ -37,6 +45,10 @@ void i2c_start(i2c_handle_t i2c)
     GPIO_ResetBits(i2c->SCL_Port, i2c->SCL_Pin);
 }
 
+/*
+ * Function: i2c_stop
+ * Description: Generate I2C stop condition
+ */
 void i2c_stop(i2c_handle_t i2c)
 {
     GPIO_ResetBits(i2c->SCL_Port, i2c->SCL_Pin);
@@ -48,6 +60,10 @@ void i2c_stop(i2c_handle_t i2c)
     i2c_delay();
 }
 
+/*
+ * Function: i2c_wait_ack
+ * Description: Wait for I2C acknowledge
+ */
 uint8_t i2c_wait_ack(i2c_handle_t i2c)
 {
     uint8_t ack = 0;
@@ -70,6 +86,10 @@ uint8_t i2c_wait_ack(i2c_handle_t i2c)
     return ack;
 }
 
+/*
+ * Function: i2c_ack
+ * Description: Send I2C acknowledge
+ */
 void i2c_ack(i2c_handle_t i2c)
 {
     GPIO_ResetBits(i2c->SCL_Port, i2c->SCL_Pin);
@@ -80,6 +100,10 @@ void i2c_ack(i2c_handle_t i2c)
     GPIO_ResetBits(i2c->SCL_Port, i2c->SCL_Pin);
 }
 
+/*
+ * Function: i2c_nack
+ * Description: Send I2C non-acknowledge
+ */
 void i2c_nack(i2c_handle_t i2c)
 {
     GPIO_ResetBits(i2c->SCL_Port, i2c->SCL_Pin);
@@ -90,6 +114,10 @@ void i2c_nack(i2c_handle_t i2c)
     GPIO_ResetBits(i2c->SCL_Port, i2c->SCL_Pin);
 }
 
+/*
+ * Function: i2c_send_byte
+ * Description: Send a byte of data over I2C
+ */
 void i2c_send_byte(i2c_handle_t i2c, uint8_t byte)
 {
     uint8_t i;
@@ -109,6 +137,10 @@ void i2c_send_byte(i2c_handle_t i2c, uint8_t byte)
     }
 }
 
+/*
+ * Function: i2c_read_byte
+ * Description: Read a byte of data over I2C
+ */
 uint8_t i2c_read_byte(i2c_handle_t i2c, uint8_t ack)
 {
     uint8_t i, receive = 0;

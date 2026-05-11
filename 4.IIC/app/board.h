@@ -11,7 +11,7 @@ extern led_desc_t led9;
 extern led_desc_t led10;
 extern botton_desc_t key0;
 extern at24c02_handle_t at24c02;
-extern usart1_handle_t debug_usart1;
+extern usart1_handle_t usart1;
 
 void board_lowlevel_init(void);
 

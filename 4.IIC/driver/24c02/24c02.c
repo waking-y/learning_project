@@ -1,18 +1,30 @@
 #include "24c02_desc.h"
 #include "24c02.h"
 
+/*
+ * Function: at24c02_wait_write_cycle
+ * Description: Wait for the write cycle to complete (typical 5ms for AT24C02)-5ms
+ */
 static void at24c02_wait_write_cycle(void)
 {
     volatile uint32_t i = 200000;
     while (i--){}
 }
 
+/*
+ * Function: at24c02_init
+ * Description: Initialize the AT24C02 EEPROM
+ */
 void at24c02_init(at24c02_handle_t dev)
 {
     if(dev && dev->i2c_bus)
         i2c_init(dev->i2c_bus);
 }
 
+/*
+ * Function: at24c02_read_byte
+ * Description: Read a byte of data from the AT24C02 EEPROM
+ */
 uint8_t at24c02_read_byte(at24c02_handle_t dev, uint8_t read_addr)
 {
     uint8_t temp = 0;
@@ -46,6 +58,10 @@ uint8_t at24c02_read_byte(at24c02_handle_t dev, uint8_t read_addr)
     return temp;
 }
 
+/*
+ * Function: at24c02_write_byte
+ * Description: Write a byte of data to the AT24C02 EEPROM
+ */
 void at24c02_write_byte(at24c02_handle_t dev, uint8_t write_addr, uint8_t data)
 {
     i2c_start(dev->i2c_bus);

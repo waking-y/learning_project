@@ -46,8 +46,8 @@ static struct i2c_desc _i2c1 = {
 
 // -------------------24C02 Description------------------
 static struct at24c02_desc _24c02 = {
-    &_i2c1,
-    0xA0
+    &_i2c1,// I2C总线
+    0xA0// 24C02的I2C地址
 };
 at24c02_handle_t at24c02 = &_24c02;
 
@@ -59,10 +59,11 @@ static struct usart1_desc _debug_usart1 = {
     GPIO_AF_USART1,                        // F4 复用通道
     115200                                 // 波特率设置
 };
-usart1_handle_t debug_usart1 = &_debug_usart1;
+usart1_handle_t usart1 = &_debug_usart1;
 
+// -------------------Retargeting printf to USART1------------------
 int fputc(int ch, FILE *f)
 {
-    usart1_send_byte(debug_usart1, (uint8_t)ch);
+    usart1_send_byte(usart1, (uint8_t)ch);
     return ch;
 }
