@@ -47,5 +47,5 @@ learning for 梅花七月香, 基于FreeRTOS的stm32智能天气时钟
 
 ### 📊 调试波形图
 
-> <img src="D:\EmbeddedSoftware\Keil5.43\Z-Projects\Learning_project\images\image-20260511215212920.png alt="image-20260511215212920" style="zoom:50%;" />
+> <img src="images\image-20260511215212920.png alt="image-20260511215212920" style="zoom:50%;" />
 
