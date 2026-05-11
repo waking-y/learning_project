@@ -28,3 +28,24 @@ learning for 梅花七月香, 基于FreeRTOS的stm32智能天气时钟
 └── 📁 mdk/                 # 🛠️ 工程管理层
     └── Keil_Project        # 存放 Keil uVision5 工程文件及编译产物
 ```
+
+## 5. SPI 项目简介 (针对逻辑分析仪优化)
+
+### 🚀 实验背景
+
+本项目不同于up主的，针对 **24MHz 采样率的入门级逻辑分析仪** 进行了优化。
+
+### 引入 CS 片选信号
+
+由于廉价逻辑分析仪在全速运行时容易出现帧对齐丢失（数据错位），本项目通过手动控制 **PB12 (CS)** 引脚，确保逻辑分析仪能精准识别每一帧的起始。
+
+**硬件接线：**
+
+- **SCK**: PB13 (CH0)
+- **MOSI**: PC3 (CH1)
+- **CS**: PB12 (CH2) —— **用于逻辑分析仪 Enable 触发
+
+### 📊 调试波形图
+
+> <img src="C:\Users\王艺超\AppData\Roaming\Typora\typora-user-images\image-20260511215212920.png" alt="image-20260511215212920" style="zoom:50%;" />
+
