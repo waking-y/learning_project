@@ -43,9 +43,9 @@ learning for 梅花七月香, 基于FreeRTOS的stm32智能天气时钟
 
 - **SCK**: PB13 (CH0)
 - **MOSI**: PC3 (CH1)
-- **CS**: PB12 (CH2) —— **用于逻辑分析仪 Enable 触发
+- **CS**: PB12 (CH2) —— 用于逻辑分析仪 Enable 触发
 
 ### 📊 调试波形图
 
-> <img src="C:\Users\王艺超\AppData\Roaming\Typora\typora-user-images\image-20260511215212920.png" alt="image-20260511215212920" style="zoom:50%;" />
+> <img src="D:\EmbeddedSoftware\Keil5.43\Z-Projects\Learning_project\images\image-20260511215212920.png alt="image-20260511215212920" style="zoom:50%;" />
 
