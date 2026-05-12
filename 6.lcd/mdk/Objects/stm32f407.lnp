@@ -1,0 +1,18 @@
+--cpu=Cortex-M4.fp.sp
+".\objects\main.o"
+".\objects\font16.o"
+".\objects\font32.o"
+".\objects\font48.o"
+".\objects\usart1.o"
+".\objects\st7789.o"
+".\objects\cpu_delay.o"
+".\objects\startup_stm32f40_41xxx.o"
+".\objects\system_stm32f4xx.o"
+".\objects\stm32f4xx_spi.o"
+".\objects\stm32f4xx_gpio.o"
+".\objects\stm32f4xx_rcc.o"
+".\objects\stm32f4xx_usart.o"
+--strict --scatter ".\Objects\stm32f407.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\stm32f407.map" -o .\Objects\stm32f407.axf
