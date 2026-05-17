@@ -131,4 +131,4 @@ learning for 梅花七月香, 基于FreeRTOS的stm32智能天气时钟
 
 *(点击下方图片或链接，即可在线查看完整的带代码高亮与滚动的交互式对比报告)*
 
-🔍 [**👉 点击此处在线查看完整的交互式代码对比与源码归档报告**](http://htmlpreview.github.io/?https://github.com/waking-y/weatherclock_stm32/blob/main/sources/lcdpro.html)
+🔍 [**👉 点击此处在线查看完整的交互式代码对比与源码归档报告**](https://rawcdn.githack.com/waking-y/weatherclock_stm32/main/sources/lcdpro.html)
