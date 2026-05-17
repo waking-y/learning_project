@@ -88,3 +88,37 @@ learning for 梅花七月香, 基于FreeRTOS的stm32智能天气时钟
 ### 🖼️ 显示效果实测
 
 > <img src="images/lcd.jpg" alt="image-20260511215212920" style="zoom:10%;" />
+
+## 7.LCD pro文件夹
+
+## 📂 1. 项目核心结构图
+
+本项目采用了清晰的分层架构（App层 / Driver层 / Firmware底层），实现了业务逻辑与底层硬件的解耦。
+
+```
+📦 7.lcdpro
+ ┣ 📂 app                  👉 【应用层】业务逻辑
+ ┃ ┣ 📜 main.c             # 主程序入口 (综合调用各模块)
+ ┃ ┗ 📜 board.c/h          # 底层硬件统筹初始化
+ ┣ 📂 driver               👉 【驱动层】外设接口代码
+ ┃ ┣ 📂 st7789             # 🔴 核心：ST7789 LCD屏幕驱动
+ ┃ ┃ ┣ 📂 font             # 字库模块 (支持 font16, font32, font48)
+ ┃ ┃ ┣ 📂 image            # 图像取模数据
+ ┃ ┃ ┗ 📜 st7789.c/h       # 屏幕初始化与绘图逻辑实现
+ ┃ ┣ 📂 24c02              # EEPROM 驱动 (IIC设备)
+ ┃ ┣ 📂 IIC-soft           # 软件 IIC 底层协议
+ ┃ ┣ 📂 USART1             # 串口1 驱动
+ ┃ ┣ 📂 botton             # 按键驱动
+ ┃ ┣ 📂 led                # LED 状态指示驱动
+ ┃ ┗ 📂 cpu_delay          # CPU级精确延时驱动 (支持毫秒/微秒)
+ ┣ 📂 firmware             👉 【固件层】STM32F4标准库与CMSIS
+ ┗ 📂 mdk                  👉 Keil MDK工程文件及编译生成产物
+```
+
+## 2. `st7789.c` 核心逻辑分析
+
+基于原UP主的代码实现，`ST7789` 屏幕的驱动逻辑主要分为以下几个核心部分：
+
+不同于up主的实现逻辑，代码解耦性更强，编程结构相对更好理解吧（个人看法
+
+<img src="images/lcdpro.jpg" alt="image-20260511215212920" style="zoom:10%;" />

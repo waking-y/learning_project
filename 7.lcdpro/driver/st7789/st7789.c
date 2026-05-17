@@ -346,10 +346,18 @@ void ST7789_ShowImage(uint16_t x, uint16_t y, const ImageDef *image)
     const uint8_t *p = image->data;
     uint16_t color;
 
-    ST7789_SetWindow(x, y, x + w - 1, y + h - 1);
+    if(x + w > LCD_WIDTH)
+        w = LCD_WIDTH - x;
+    if(y + h > LCD_HEIGHT)
+        h = LCD_HEIGHT - y;
+    if(w == 0 || h == 0)
+        return;
 
-    ST7789_CS(0);
+    ST7789_SetWindow(x, y, x + w - 1, y + h - 1);
+    
     ST7789_DC(1);
+    ST7789_CS(0);
+    
 
     // 每次取2个字节，交换高低位
     for (i = 0; i < w * h; i++)
