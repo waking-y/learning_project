@@ -62,6 +62,7 @@ learning for 梅花七月香, 基于FreeRTOS的stm32智能天气时钟
 │   └── 📁 font/            # 🔠 字库组件：包含16/32/48等多种字号的点阵数据
 │
 ├── 📁 driver/              # ⚙️ 驱动中轴层 (Middleware)
+│   ├── *_desc.h            # 原IIC等驱动的外设属性定义
 │   ├── led.c/h             # 💡 LED 抽象层
 │   ├── botton.c/h          # 🔘 按键中断及回调逻辑
 │   ├── i2c.c/h             # 🚏 软件 I2C 核心协议层
@@ -71,6 +72,7 @@ learning for 梅花七月香, 基于FreeRTOS的stm32智能天气时钟
 │
 ├── 📁 images/              # 🖼️ 存放文档图片
 │   └── image-20260511215212920.png  # SPI 波形截图
+│	└── lcd.jpg  # lcd 显示字符
 │
 ├── 📁 firmware/            # 🧱 STM32 官方标准外设固件库
 └── 📁 mdk/                 # 🛠️ Keil 工程管理文件
@@ -85,4 +87,4 @@ learning for 梅花七月香, 基于FreeRTOS的stm32智能天气时钟
 
 ### 🖼️ 显示效果实测
 
-> <img src="images/lcd.jpg" alt="image-20260511215212920" style="zoom:25%;" />
+> <img src="images/lcd.jpg" alt="image-20260511215212920" style="zoom:10%;" />
