@@ -122,3 +122,13 @@ learning for 梅花七月香, 基于FreeRTOS的stm32智能天气时钟
 不同于up主的实现逻辑，代码解耦性更强，编程结构相对更好理解吧（个人看法
 
 <img src="images/lcdpro.jpg" alt="image-20260511215212920" style="zoom:10%;" />
+
+## 3.代码的对比
+
+在 `7.lcdpro` 工程中，我们对 ST7789 屏幕的底层 SPI 驱动及中文字库渲染进行了深度探讨。
+
+代码没有绝对的优劣，只有针对不同场景的取舍。为了直观展示“当前仓库的经典高移植性架构”**与**“引入的极限刷新率/富文本特化架构”之间的差异，我们制作了一份深度的逻辑剖析图，并对两份代码的完整源码进行了归档保存。
+
+*(点击下方图片或链接，即可在线查看完整的带代码高亮与滚动的交互式对比报告)*
+
+🔍 [**👉 点击此处在线查看完整的交互式代码对比与源码归档报告**](http://htmlpreview.github.io/?https://github.com/waking-y/weatherclock_stm32/blob/main/sources/lcdpro.html)
