@@ -32,7 +32,7 @@ int main(void)
     ST7789_ShowString(10, 30, "ST7789 SPI LCD", CYAN, BLACK, 16, 0);
     ST7789_ShowString(10, 50, "Color: RGB565", MAGENTA, GREEN, 32, 0);
     delay_ms(2000);
-    
+
     // 显示图片 
     ST7789_Clear(BLACK);
     ST7789_ShowImage(0, 0, &my_demo_ikun);
